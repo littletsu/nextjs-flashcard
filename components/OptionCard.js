@@ -16,7 +16,7 @@ export default class OptionCard extends React.Component {
     isCorrectAnswer = () => this.app.state.answer === this.state.option[0]
 
     render() {
-        return <Columns.Column size="one-third" className="clickable" onClick={() => this.onClick(this.state.option)}>
+        return <Columns.Column size="one-third" className="clickable" onClick={() => this.onClick(this)}>
             <Card className={`has-text-${this.app.state.hasAnswered ? this.isCorrectAnswer() ? 'success' : 'danger' : 'white'}`}>
                 <Card.Content className="has-text-centered">
                     {this.state.option[0]}
